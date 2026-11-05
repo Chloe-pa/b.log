@@ -1,0 +1,1 @@
+{"name":"blog-server-gated-journal","private":true,"type":"module","scripts":{"build":"node scripts/embed-assets.mjs && bash scripts/package-worker.sh","test":"node --test tests/security.test.mjs","validate":"node scripts/validate-artifact.mjs"}}
