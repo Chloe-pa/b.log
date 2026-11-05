@@ -74,10 +74,5 @@ rows.addEventListener('keydown', event => {
 document.querySelector('#cipher-reset').addEventListener('click', () => {
   chosen.forEach((_, row) => pick(row, '-'));
 });
-document.querySelector('#cipher-hint').addEventListener('click', event => {
-  const help = document.querySelector('#cipher-help');
-  help.hidden = !help.hidden;
-  event.currentTarget.setAttribute('aria-expanded', String(!help.hidden));
-});
 window.addEventListener('hashchange', () => { if (location.hash) cancelOpening(); });
 })();

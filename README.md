@@ -15,7 +15,7 @@ Direct links: `#archive`, `#about`, `#post/slow-day`. All content is public stat
 ## Interactions
 
 - The photograph carries six rows, each containing `a`–`z` and `-` on a single line. Select one letter per row. The selected letters also form a vertical word in the left rail.
-- Completing `memory`, `ritual`, `love--`, or `movies` opens that collection automatically. Shorter keywords require trailing blank rows (`-`), and matching is exact; interior blanks do not count. `-` clears a row. Reset clears all rows and cancels any pending opening; a hint can be toggled.
+- Completing `memory`, `ritual`, `love--`, or `movies` opens that collection automatically. Shorter keywords require trailing blank rows (`-`), and matching is exact; interior blanks do not count. `-` clears a row. Reset clears all rows and cancels any pending opening.
 - Each row has one Tab stop. Arrow keys move across letters; up/down move between rows. Typing a letter selects it and advances a row. Backspace clears the current/previous row.
 - Narrow viewports preserve one-line alphabets with horizontal scrolling and a fixed selected-letter rail.
 - Top-left wordmark: about. `/`: archive search. Escape: close. Native dialog provides keyboard focus trapping. A keyboard skip link opens the archive directly.
