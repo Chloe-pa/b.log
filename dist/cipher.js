@@ -26,12 +26,14 @@ function pick(row, letter) {
   const count = chosen.filter(c => c !== '-').length;
   const word = chosen.join('');
   status.textContent = count ? `${chosen.map(c => c === '-' ? '·' : c).join(' ')} / ${count} of 6` : '한 줄에 한 글자. 위에서 아래로.';
-  if (word === 'memory') {
-    status.textContent = 'm e m o r y — 문이 열려요.';
+  const match = Object.keys(window.MENUS).find(keyword => keyword.padEnd(6, '-') === word);
+  if (match) {
+    status.textContent = `${match.split('').join(' ')} — 문이 열려요.`;
+    machine.querySelector('.cipher-heading > span:first-child').dataset.found = `${match}, found.`;
     machine.classList.add('unlocked');
     opening = setTimeout(() => {
       opening = null;
-      if (chosen.join('') === 'memory' && !location.hash) location.hash = 'archive';
+      if (chosen.join('') === match.padEnd(6, '-') && !location.hash) location.hash = match;
     }, matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 650);
   } else if (count === 6) status.textContent = `${word} — 아직 열리지 않은 단어예요.`;
 }
