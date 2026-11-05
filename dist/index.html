@@ -3,19 +3,22 @@
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#2049b6"><meta name="description" content="어딘가에서 발견한 장면과 오래 남겨두고 싶은 생각. 사진 속을 탐색하는 개인 기록."><title>b.log — somewhere</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%232448E8'/%3E%3Ctext x='14' y='47' font-size='48' fill='%23F5F0E5'%3Eb%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="style.css"></head>
 <body>
 <a class="skip" href="#archive">전체 글 보기</a>
-<main id="scene" aria-label="사진 속 오브젝트를 눌러 기록을 발견해 보세요">
+<main id="scene" aria-label="사진 위 알파벳에서 여섯 글자를 골라 기록을 발견해 보세요">
 <img id="photograph" src="assets/pool.webp" width="1536" height="1024" alt="산호색 빈 수영장에 커다란 파란 매듭 조형물이 놓여 있고, 앞쪽에는 귤 하나가 있다.">
 <div class="shade"></div>
 <button class="spot wordmark" data-x="140" data-y="51" data-target="about" aria-label="somewhere, 이 공간 소개"><span class="tip">이 공간에 대해 ↗</span></button>
-<button class="spot knot" data-x="1075" data-y="480" data-target="post/slow-day" aria-label="대표 글: 아무것도 하지 않는 날의 쓸모"><span class="tip">아무것도 하지 않는 날의 쓸모 ↗</span></button>
-<button class="spot orange" data-x="282" data-y="863" data-target="post/small-things" aria-label="귤 속 메모 발견하기"><span class="marker">+</span><span class="tip">작은 것들을 줍는 마음 ↗</span></button>
-<button class="spot star" data-x="113" data-y="978" data-target="archive" aria-label="별표: 모든 기록 열기"><span class="tip">모아 둔 기록들 ↗</span></button>
-<button class="spot corner" data-x="1432" data-y="897" data-target="post/staying" aria-label="오래 남는 장면 읽기"><span class="tip">오래 남는 장면 ↗</span></button>
+<section id="cipher" class="cipher" aria-label="암호로 기록 열기" aria-describedby="cipher-help">
+<div class="cipher-heading"><span>find a word.</span><span>six letters / one door</span></div>
+<div class="cipher-machine"><div class="cipher-spine" aria-hidden="true"></div><div class="cipher-scroll" tabindex="-1"><div id="cipher-rows"></div></div></div>
+<div class="cipher-bottom"><p id="cipher-status" role="status" aria-live="polite">한 줄에 한 글자. 위에서 아래로.</p><div><button id="cipher-hint" aria-expanded="false" aria-controls="cipher-help">hint ↗</button><button id="cipher-reset" aria-label="선택한 글자 모두 지우기">reset ↺</button></div></div>
+<p id="cipher-help" hidden>기억을 뜻하는 여섯 글자. m으로 시작해요.</p>
+<span class="cipher-mobile-note">옆으로 밀어 a–z를 둘러보세요.</span>
+</section>
 <button class="mobile-logo" data-target="about" aria-label="이 공간 소개">somewhere</button>
-<button class="mobile-index" data-target="archive" aria-label="모든 기록 열기">✳ <span>look closer</span></button>
-<p class="hint" id="hint">천천히 둘러보세요. 발견할 것이 있어요.</p>
+
+
 <span class="edition">b.log / scene no. 001</span>
 </main>
 <dialog id="overlay" aria-labelledby="panel-title"><div class="panel-head"><a href="#" class="home" aria-label="사진으로 돌아가기">somewhere</a><button id="close" aria-label="닫고 사진으로 돌아가기">닫기 <span>×</span></button></div><div id="panel"></div><footer>something worth keeping <span>b.log © 2026</span></footer></dialog>
-<script src="posts.js"></script><script src="app.js"></script>
+<script src="posts.js"></script><script src="app.js"></script><script src="cipher.js"></script>
 </body></html>

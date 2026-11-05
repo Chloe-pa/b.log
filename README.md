@@ -14,13 +14,11 @@ Direct links: `#archive`, `#about`, `#post/slow-day`. All content is public stat
 
 ## Interactions
 
-- Blue knot: featured story.
-- Orange: short note.
-- Asterisk: archive with live search and category filters.
-- Top-left wordmark: about.
-- Slanted lower-right caption: places story.
-- `/`: archive search. Escape: close. Native dialog provides keyboard focus trapping.
-- Mobile: persistent archive shortcut; image hotspots follow the photograph's cover crop.
+- The photograph carries six rows, each containing `a`–`z` and `-` on a single line. Select one letter per row. The selected letters also form a vertical word in the left rail.
+- Completing `memory` opens the archive automatically. `-` clears a row. Reset clears all rows and cancels any pending opening; a hint can be toggled.
+- Each row has one Tab stop. Arrow keys move across letters; up/down move between rows. Typing a letter selects it and advances a row. Backspace clears the current/previous row.
+- Narrow viewports preserve one-line alphabets with horizontal scrolling and a fixed selected-letter rail.
+- Top-left wordmark: about. `/`: archive search. Escape: close. Native dialog provides keyboard focus trapping. A keyboard skip link opens the archive directly.
 - Reduced-motion setting respected.
 
 ## Deployment
